@@ -14,59 +14,6 @@ An interface for the administrator to easily change application settings. Uses L
 > ### Security updates and breaking changes
 > Please **[subscribe to the Backpack Newsletter](http://eepurl.com/bUEGjf)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
 
-## Install
-
-1) In your terminal:
-
-``` bash
-$ composer require backpack/settings
-```
-
-2) For Laravel <5.5 apps, add the service provider to your config/app.php file:
-```php
-Backpack\Settings\SettingsServiceProvider::class,
-```
-
-3) Run the migration and add some example settings:
-```bash
-$ php artisan vendor:publish --provider="Backpack\Settings\SettingsServiceProvider"
-$ php artisan migrate
-$ php artisan db:seed --class="Backpack\Settings\database\seeds\SettingsTableSeeder"
-```
-
-4) [Optional] Add a menu item for it in resources/views/vendor/backpack/base/inc/sidebar.blade.php or menu.blade.php:
-
-```html
-<li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
-```
-
-## Usage
-
-### End user
-Add it to the menu or access it by its route: **application/admin/setting**
-
-### Programmer
-Use it like you would any config value in a virtual settings.php file. Except the values are stored in the database and fetched on boot, instead of being stored in a file.
-
-``` php
-Config::get('settings.contact_email')
-```
-
-### Add new settings
-
-Settings are stored in the database in the "settings" table. Its columns are:
-- id (ex: 1)
-- key (ex: contact_email)
-- name (ex: Contact form email address)
-- description (ex: The email address that all emails go to.)
-- value (ex: admin@laravelbackpack.com)
-- field (Backpack CRUD field configuration in JSON format. https://laravel-backpack.readme.io/docs/crud-fields#standard-field-types)
-- active (1 or 0)
-- created_at
-- updated_at
-
-There is no interface available to add new settings. They are added by the developer directly in the database, since the Backpack CRUD field configuration is a bit complicated. See the field types and their configuration code on https://laravel-backpack.readme.io/docs
-
 ## Screenshots
 
 See http://laravelbackpack.com
