@@ -1,0 +1,35 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Late", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh; /* setting agar height tidak 100% */
+    background-image: linear-gradient(to right bottom,
+        hsla(111, 55%, 64%, 0.801),
+        hsla(159, 64%, 43%, 0.801)),
+        url(../img/hero.jpg);
+    background-size: cover; /*agar gambar mengikuti ketika kita ubah2 browser */
+    background-position: top; /*gambar atas tidak akan ke crop*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+    
+}
