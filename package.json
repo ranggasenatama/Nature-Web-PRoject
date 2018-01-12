@@ -1,0 +1,22 @@
+{
+  "name": "natoure",
+  "version": "1.0.0",
+  "description": "Landing page for nature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranggasenatama/Nature-Web-PRoject.git"
+  },
+  "author": "rangga SP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranggasenatama/Nature-Web-PRoject/issues"
+  },
+  "homepage": "https://github.com/ranggasenatama/Nature-Web-PRoject#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
