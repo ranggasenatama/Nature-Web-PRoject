@@ -1,4 +1,5 @@
 //ABSTRACTS
+@import "abstracts/mixins";
 @import "abstracts/variables";
 //BASE
 @import "base/base";
@@ -7,4 +8,5 @@
 //COMPONENTS
 @import "components/button";
 //LAYOUT
+@import "layout/grid";
 @import "layout/header";
