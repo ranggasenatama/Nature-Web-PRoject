@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child){
@@ -13,7 +12,6 @@
     //$ = akhir adalah
     //* = semua di cek
     [class^="col-"]{
-        background-color: rgb(13, 235, 42);
         float: left;
 
         &:not(:last-child){
