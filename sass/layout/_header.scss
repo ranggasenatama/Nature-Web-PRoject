@@ -8,6 +8,7 @@
     background-position: top; /*gambar atas tidak akan ke crop*/
     position: relative;
 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) ;/* polygon(x y, x y, x y, x y) */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) ;/* polygon(x y, x y, x y, x y) */
     &__logo-box{
         position: absolute;
