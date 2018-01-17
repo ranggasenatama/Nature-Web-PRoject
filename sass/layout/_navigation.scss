@@ -14,6 +14,8 @@
         border-radius: 50%;
         z-index: 110;
         box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background{
@@ -80,6 +82,7 @@
         }
     }
 
+    //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(50);
     }
@@ -87,5 +90,60 @@
     &__checkbox:checked ~ &__nav{
         opacity: 1;
         width: 100%;
+    }
+
+    //ICON
+    &__icon{
+        position: relative;
+        margin-top: 3.4rem;;
+
+        &,
+        &::before,
+        &::after{
+            display: inline-block;
+
+            width: 3rem;
+            height: .2rem;
+            background-color: #333;
+        }
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before{
+            top: -1rem;
+            // transform-origin: right; //agar pas pucuk kanan
+        }
+
+        &::after{
+            top: 1rem;
+        }
+    }
+
+    &__button:hover &__icon::before{
+        top: -1.2rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1.2rem;
+    }
+
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
