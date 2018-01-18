@@ -1,3 +1,18 @@
+/*
+0 - 600 : Phone
+600 - 900 : Tablet Potrait
+900 - 1200 : Tablet Landscape
+1200 - 1800 : PC
+1800 - unlimited : Big Desktop
+
+$breakpoint argument choices:
+~ phone
+~ tab-port
+~ tab-land
+~ big-desk
+
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -8,6 +23,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
