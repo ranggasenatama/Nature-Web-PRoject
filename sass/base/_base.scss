@@ -31,4 +31,10 @@ html {
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    //URUTAN di balik agar efeknya kerasa
+    @include respond(tab-land){
+        padding: 0;
+    }
 }

@@ -8,8 +8,13 @@
     background-position: top; /*gambar atas tidak akan ke crop*/
     position: relative;
 
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) ;/* polygon(x y, x y, x y, x y) */
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+
+    @include respond(phone){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%) ;/* polygon(x y, x y, x y, x y) */
+    }
     &__logo-box{
         position: absolute;
         top: 4rem;
