@@ -159,15 +159,27 @@ body {
 
 .margin-bot-small {
   margin-bottom: 1.5rem !important; }
+  @media (max-width: 56.25em) {
+    .margin-bot-small {
+      margin-bottom: 1rem !important; } }
 
 .margin-bot-medium {
   margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .margin-bot-medium {
+      margin-bottom: 3rem !important; } }
 
 .margin-bot-big {
   margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .margin-bot-big {
+      margin-bottom: 6rem !important; } }
 
 .margin-top-big {
   margin-top: 10rem !important; }
+  @media (max-width: 56.25em) {
+    .margin-top-big {
+      margin-bottom: 8rem !important; } }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -600,7 +612,8 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -669,7 +682,11 @@ body {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 5rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
@@ -835,6 +852,9 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .section-feature {
   padding: 20rem 0;
@@ -844,19 +864,31 @@ body {
   margin-top: -10rem; }
   .section-feature > * {
     transform: skewY(7deg); }
+  @media (max-width: 56.25em) {
+    .section-feature {
+      padding: 15rem 0; } }
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 10rem 0; } }
 
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      padding: 10rem 0; } }
 
 .book {
   background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
